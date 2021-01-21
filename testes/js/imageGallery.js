@@ -29,12 +29,19 @@
 
 function setup () {
   // Write your code here.
+  elementos = document.getElementsByClassName("remove");
+  for (var i = 0; i <elementos.length; i++){
+    elementos[i].addEventListener('click', function (){
+      this.parentNode.remove();
+    });
+  }
+
 }
 
 // Example case. 
 document.body.innerHTML = `
 <div class="image">
-  <img src="https://goo.gl/kjzfbE" alt="First">
+  <img src="https://goo.gl/kjzfbE" alt="First"> 
   <button class="remove">X</button>
 </div>
 <div class="image">
